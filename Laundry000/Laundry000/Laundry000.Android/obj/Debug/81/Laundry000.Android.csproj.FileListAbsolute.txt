@@ -102,4 +102,6 @@ D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\obj\
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\bin\Debug\netstandard2.0\Laundry000.dll
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\bin\Debug\Laundry000.dll.mdb
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.Android\obj\Debug\81\linksrc\Laundry000.dll.mdb

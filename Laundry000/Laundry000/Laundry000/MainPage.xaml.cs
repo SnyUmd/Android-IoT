@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
 
+using Xamarin.Essentials;
+
+
 namespace Laundry000
 {
     public partial class MainPage : ContentPage
@@ -28,13 +31,14 @@ namespace Laundry000
             bool blUsage = false;
 
 
-            if (EntryPrice.Text.Length > 0) blPrice = true;
-            if (EntryCapa.Text.Length > 0) blCapa = true;
-            if (EntryUsage.Text.Length > 0) blUsage = true;
+            if (EntryPrice.Text != null && EntryPrice.Text.Length > 0) blPrice = true;
+            if (EntryCapa.Text != null && EntryCapa.Text.Length > 0) blCapa = true;
+            if (EntryUsage.Text != null && EntryUsage.Text.Length > 0) blUsage = true;
 
             return blPrice & blCapa & blUsage;
         }
 
+        //*******************************************************************************
         public string CheckText(string str)
         {
             string strRtn;
@@ -48,16 +52,18 @@ namespace Laundry000
             strRtn = Regex.Replace(strRtn, strRemove, "");
 
             return strRtn;
+        }
 
-            //Regex regex = new Regex("[^0-9]+");
-            //bool blResult = false;
-            //string inputText = entry.Text.Substring(entry.Text.Length - 1, 1);
+        //コピー用メソッド
+        //*******************************************************************************
+        public bool SetTextToClipBoard(string text)
+        {
+            //引数のテキストをクリップボードに格納
+            var clipboardManager = (ClipboardManager)Forms.Context.GetSystemService(Context.ClipboardService);
+            ClipData clip = ClipData.NewPlainText("", text);
+            clipboardManager.PrimaryClip = clip;
 
-            ////入力文字の削除フラグをセット
-            //if (regex.IsMatch(inputText)) blResult = true;
-            //else if (entry.Text.Length > InputLen) blResult = true;
-
-            //return blResult;
+            return true;
         }
 
         //*******************************************************************************
@@ -68,23 +74,40 @@ namespace Laundry000
             int iHashCode_EntryUsage = EntryUsage.GetHashCode();
 
             //BackSpaseやDelete用の対策
-            if (e.NewTextValue.Length <= 0) return;
+            if (e.NewTextValue.Length <= 0)
+            {
+                if (sender.GetHashCode() == iHashCode_EntryPrice)
+                    EntryPrice.Text = CheckText(EntryPrice.Text);
 
-            if (sender.GetHashCode() == iHashCode_EntryPrice)
-                EntryPrice.Text = CheckText(EntryPrice.Text);
-            //EntryPrice.Text = EntryPrice.Text.Remove(EntryPrice.Text.Length - 1, 1);
+                else if (sender.GetHashCode() == iHashCode_EntryCapa)
+                    EntryCapa.Text = CheckText(EntryCapa.Text);
 
-            else if (sender.GetHashCode() == iHashCode_EntryCapa)
-                EntryCapa.Text = CheckText(EntryCapa.Text);
-            //EntryCapa.Text = EntryCapa.Text.Remove(EntryCapa.Text.Length - 1, 1);
-
-            else if (sender.GetHashCode() == iHashCode_EntryUsage)
-                EntryUsage.Text = CheckText(EntryUsage.Text);
-            //EntryUsage.Text = EntryUsage.Text.Remove(EntryUsage.Text.Length - 1, 1);
+                else if (sender.GetHashCode() == iHashCode_EntryUsage)
+                    EntryUsage.Text = CheckText(EntryUsage.Text);
+            }
+            BtnCalculation.IsEnabled = Check_Entry();
         }
 
         //*******************************************************************************
         private void BtnCalculation_Clicked(object sender, EventArgs e)
+        {
+            int iPrice = int.Parse(EntryPrice.Text);
+            int iCapa = int.Parse(EntryCapa.Text);
+            int iUsage = int.Parse(EntryUsage.Text);
+
+            long loTotalUse = iCapa / iUsage;
+            long loOneUsePrice = iPrice / loTotalUse;
+            int iAddCycle = 1000 / iUsage;
+
+            Label_PriceParTime.Text = loOneUsePrice.ToString();
+            Label_NumberOfUses.Text = loTotalUse.ToString();
+            Label_ReplenishmentCycle.Text = iAddCycle.ToString();
+
+            BtnCopy.IsEnabled = true;
+
+        }
+
+        private void BtnCopy_Clicked(object sender, EventArgs e)
         {
 
         }
