@@ -10,13 +10,16 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="10" />
+                <RowDefinition Height="5" />
                 <RowDefinition Height="20" />
-                <RowDefinition Height="10" />
+                <RowDefinition Height="5" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="1" Grid.Column="0"
-                Text="Detergent / Softener" HorizontalTextAlignment="Center" />
+            <Label  Grid.Row="1" Grid.Column="0"
+                    Text="Detergent" 
+                    FontSize="Default"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White" />
         </Grid>
 
         <Grid>
@@ -29,13 +32,12 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="5" />
+                <RowDefinition Height="2" />
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="5" />
+                <RowDefinition Height="2" />
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="5" />
+                <RowDefinition Height="2" />
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="5" />
             </Grid.RowDefinitions>
 
             <!--Price-->
@@ -59,19 +61,19 @@
                     HorizontalTextAlignment="End" 
                     TextChanged="Entry_TextChanged" />
             <Label  Grid.Row="3" Grid.Column="3" 
-                    Text="ml" 
+                    Text="㎖" 
                     VerticalTextAlignment="Center"/>
 
             <!--Usage in 30L of water-->
             <Label Grid.Row="5" Grid.Column="1"
-                Text="Usage in 30L of water" FontSize="Default"/>
+                Text="Usage in 30L" FontSize="Default"/>
             <Entry  Grid.Row="5" Grid.Column="2"
                     x:Name="EntryUsage"
                     Placeholder="" 
                     HorizontalTextAlignment="End" 
                     TextChanged="Entry_TextChanged" />
             <Label  Grid.Row="5" Grid.Column="3" 
-                    Text="ml" 
+                    Text="㎖" 
                     VerticalTextAlignment="Center"/>
         </Grid>
 
@@ -82,16 +84,15 @@
                 <ColumnDefinition Width="2" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="5" />
                 <RowDefinition Height="40" />
-                <RowDefinition Height="5" />
             </Grid.RowDefinitions>
 
-            <Button Grid.Row="1" Grid.Column="1" 
+            <Button Grid.Column="1" 
                     x:Name="BtnCalculation" 
                     Text="Calculation" 
                     Clicked="BtnCalculation_Clicked" 
-                    IsEnabled="False"/>
+                    IsEnabled="False"
+                    FontSize="12"/>
         </Grid>
 
         <Grid>
@@ -103,39 +104,60 @@
                 <ColumnDefinition Width="10" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="2" />
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="2" />
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="2" />
+                <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
 
+ <!--一回分の価格-->
             <Label  Grid.Row="1" Grid.Column="1"
                     Text="Price par time" />
             <Label  Grid.Row="1" Grid.Column="2"
+                    x:Name="Label_PriceParTime"
                     Text="*****" HorizontalTextAlignment="End"/>
             <Label  Grid.Row="1" Grid.Column="3"
                     Text="Yen" />
-
+<!--使用回数-->
             <Label  Grid.Row="3" Grid.Column="1"
                     Text="Number of uses" />
             <Label  Grid.Row="3" Grid.Column="2"
+                    x:Name="Label_NumberOfUses"
                     Text="*****" HorizontalTextAlignment="End"/>
             <Label  Grid.Row="3" Grid.Column="3"
-                    Text="Times/set" />
-
+                    Text="Times/set" 
+                    FontSize="10"
+                    VerticalTextAlignment="Center"/>
+<!--補充サイクル-->
             <Label  Grid.Row="5" Grid.Column="1"
                     Text="Replenishment cycle (1L)" />
             <Label  Grid.Row="5" Grid.Column="2"
-                    Text="*****" HorizontalTextAlignment="End"/>
+                    x:Name="Label_ReplenishmentCycle"
+                    Text="*****" 
+                    HorizontalTextAlignment="End"/>
             <Label  Grid.Row="5" Grid.Column="3"
-                    Text="day" />
-            <Label  Grid.Row="6" Grid.Column="1" Text="[* Container is 1L]" FontSize="Small" VerticalTextAlignment="Start"/>
-
+                    Text="days" />
         </Grid>
 
+        <Grid BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" 
+                    x:Name="BtnCopy" 
+                    Text="Copy" 
+                    Clicked="BtnCopy_Clicked" 
+                    IsEnabled="False"
+                    FontSize="12"/>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
