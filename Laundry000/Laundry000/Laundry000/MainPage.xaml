@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Laundry000"
+             x:Class="Laundry000.MainPage">
+
+    <StackLayout >
+        <Grid BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Grid.Column="0"
+                Text="Detergent / Softener" HorizontalTextAlignment="Center" />
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+
+            <!--Price-->
+            <Label Grid.Row="1" Grid.Column="1"
+                Text="Price" FontSize="Default"/>
+            <Entry  Grid.Row="1" Grid.Column="2"
+                    x:Name="EntryPrice"
+                    Placeholder="" 
+                    HorizontalTextAlignment="End" 
+                    TextChanged="Entry_TextChanged"/>
+            <Label  Grid.Row="1" Grid.Column="3" 
+                    Text="Yen" 
+                    VerticalTextAlignment="Center"/>
+
+            <!--Capa-->
+            <Label Grid.Row="3" Grid.Column="1"
+                Text="Total capacity" FontSize="Default"/>
+            <Entry  Grid.Row="3" Grid.Column="2"
+                    x:Name="EntryCapa"
+                    Placeholder="" 
+                    HorizontalTextAlignment="End" 
+                    TextChanged="Entry_TextChanged" />
+            <Label  Grid.Row="3" Grid.Column="3" 
+                    Text="ml" 
+                    VerticalTextAlignment="Center"/>
+
+            <!--Usage in 30L of water-->
+            <Label Grid.Row="5" Grid.Column="1"
+                Text="Usage in 30L of water" FontSize="Default"/>
+            <Entry  Grid.Row="5" Grid.Column="2"
+                    x:Name="EntryUsage"
+                    Placeholder="" 
+                    HorizontalTextAlignment="End" 
+                    TextChanged="Entry_TextChanged" />
+            <Label  Grid.Row="5" Grid.Column="3" 
+                    Text="ml" 
+                    VerticalTextAlignment="Center"/>
+        </Grid>
+
+        <Grid BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="1" Grid.Column="1" 
+                    x:Name="BtnCalculation" 
+                    Text="Calculation" 
+                    Clicked="BtnCalculation_Clicked" 
+                    IsEnabled="False"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Label  Grid.Row="1" Grid.Column="1"
+                    Text="Price par time" />
+            <Label  Grid.Row="1" Grid.Column="2"
+                    Text="*****" HorizontalTextAlignment="End"/>
+            <Label  Grid.Row="1" Grid.Column="3"
+                    Text="Yen" />
+
+            <Label  Grid.Row="3" Grid.Column="1"
+                    Text="Number of uses" />
+            <Label  Grid.Row="3" Grid.Column="2"
+                    Text="*****" HorizontalTextAlignment="End"/>
+            <Label  Grid.Row="3" Grid.Column="3"
+                    Text="Times/set" />
+
+            <Label  Grid.Row="5" Grid.Column="1"
+                    Text="Replenishment cycle (1L)" />
+            <Label  Grid.Row="5" Grid.Column="2"
+                    Text="*****" HorizontalTextAlignment="End"/>
+            <Label  Grid.Row="5" Grid.Column="3"
+                    Text="day" />
+            <Label  Grid.Row="6" Grid.Column="1" Text="[* Container is 1L]" FontSize="Small" VerticalTextAlignment="Start"/>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

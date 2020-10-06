@@ -1,0 +1,11 @@
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\bin\Debug\netstandard2.0\Laundry000.deps.json
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\bin\Debug\netstandard2.0\Laundry000.dll
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\bin\Debug\netstandard2.0\Laundry000.pdb
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.csproj.CoreCompileInputs.cache
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.AssemblyInfoInputs.cache
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.AssemblyInfo.cs
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\XamlC.stamp
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.dll
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.pdb
