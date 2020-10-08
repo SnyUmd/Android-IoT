@@ -9,3 +9,4 @@ D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\ne
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\XamlC.stamp
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.dll
 D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.pdb
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000\obj\Debug\netstandard2.0\Laundry000.csprojAssemblyReference.cache

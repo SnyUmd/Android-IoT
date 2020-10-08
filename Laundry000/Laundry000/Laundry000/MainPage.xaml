@@ -151,12 +151,12 @@
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="1" 
+            <!--<Button Grid.Column="1" 
                     x:Name="BtnCopy" 
                     Text="Copy" 
                     Clicked="BtnCopy_Clicked" 
                     IsEnabled="False"
-                    FontSize="12"/>
+                    FontSize="12"/>-->
         </Grid>
     </StackLayout>
 

@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
 
-using Xamarin.Essentials;
-
-
 namespace Laundry000
 {
     public partial class MainPage : ContentPage
@@ -54,17 +51,6 @@ namespace Laundry000
             return strRtn;
         }
 
-        //コピー用メソッド
-        //*******************************************************************************
-        public bool SetTextToClipBoard(string text)
-        {
-            //引数のテキストをクリップボードに格納
-            var clipboardManager = (ClipboardManager)Forms.Context.GetSystemService(Context.ClipboardService);
-            ClipData clip = ClipData.NewPlainText("", text);
-            clipboardManager.PrimaryClip = clip;
-
-            return true;
-        }
 
         //*******************************************************************************
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
@@ -103,7 +89,7 @@ namespace Laundry000
             Label_NumberOfUses.Text = loTotalUse.ToString();
             Label_ReplenishmentCycle.Text = iAddCycle.ToString();
 
-            BtnCopy.IsEnabled = true;
+            //BtnCopy.IsEnabled = true;
 
         }
 

@@ -1,0 +1,8 @@
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\ibtool\_BundleResourceWithLogicalName.items
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\actool\_PartialAppManifest.items
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\actool\_BundleResourceWithLogicalName.items
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\coremlc\_PartialAppManifest.items
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\coremlc\_BundleResourceWithLogicalName.items
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\optimized\
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\Laundry000.iOS.csprojAssemblyReference.cache
+D:\_git\VS2017_Android\Android-IoT\Laundry000\Laundry000\Laundry000.iOS\obj\iPhone\Release\Laundry000.iOS.csproj.CoreCompileInputs.cache
